@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<s:WindowedApplication
+        xmlns:fx="http://ns.adobe.com/mxml/2009"
+        xmlns:s="library://ns.adobe.com/flex/spark"
+        width="800" height="800">
+
+    <fx:Script>
+        <![CDATA[
+        import mx.controls.Alert;
+
+        private var textUtility:TextUtility = new TextUtility();
+
+        ]]>
+    </fx:Script>
+
+    <s:layout>
+        <s:VerticalLayout paddingLeft="10" horizontalAlign="center"/>
+    </s:layout>
+
+    <s:Image id="kingOfSweden"
+        source="assets/robbaz.png"
+        useHandCursor="true"
+        buttonMode="true"
+        click="navigateToURL(new URLRequest('http://www.youtube.com/watch?v=uhBiNx749Zw'))"/>
+
+    <s:Button click="Alert.show(textUtility.getHelloText())" label="Say Hello"/>
+
+</s:WindowedApplication>

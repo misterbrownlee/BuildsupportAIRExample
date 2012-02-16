@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="BuildsupportAIRExample" basedir=".">
+
+  <property file="${basedir}/build/build.properties"/>
+  <import file="${buildsupport.dir}/import/air-imports.xml"/>
+
+  <target name="clean" depends="clean-all"/>
+  <target name="build" depends="build-air"/>
+  <target name="test" depends="test-air"/>
+  <target name="package" depends="package-air"/>
+  <target name="deploy" depends="clean, test, build, package"/>
+
+</project>
