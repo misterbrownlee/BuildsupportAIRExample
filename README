@@ -48,6 +48,7 @@ TROUBLE?
     Cause: The name is undefined."
   A: Most likely your flex.home.dir path in build.properties is set wrong
   
-  Q: package-adt returns error around timestamp
-  A: you are trying to package without being connected to the internet, or
+  Q: package-adt returns error 10 : "Could not generate timestamp: 
+    timestamp.geotrust.com"
+  A: You are trying to package without being connected to the internet, or
     you are behind a proxy that blocks the timestamp server
