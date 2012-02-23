@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="BuildsupportAIRExample" basedir=".">
+<project name="BuildsupportAIRExample" basedir="." default="deploy">
 
   <property file="${basedir}/build/build.properties"/>
   <import file="${buildsupport.dir}/import/air-imports.xml"/>
 
-  <target name="clean" depends="clean-all"/>
-  <target name="build" depends="build-air"/>
-  <target name="test" depends="test-air"/>
-  <target name="package" depends="package-air"/>
-  <target name="deploy" depends="clean, test, build, package"/>
+  <target name="clean" depends="clean-all">
+    <echo message="BuildsupportAIRExample :: clean finished."/>
+  </target>
+  
+  <target name="build" depends="build-air">
+    <echo message="BuildsupportAIRExample :: build finished."/>
+  </target>
+  
+  <target name="test" depends="test-air">
+    <echo message="BuildsupportAIRExample :: test finished."/>
+  </target>
+  
+  <target name="package" depends="package-air">
+    <echo message="BuildsupportAIRExample :: package finished."/>
+  </target>
+  
+  <target name="deploy" depends="clean, test, build, package">
+    <echo message="BuildsupportAIRExample :: deploy finished."/>
+  </target>
 
 </project>
