@@ -2,6 +2,7 @@
 <project name="BuildsupportAIRExample" basedir="." default="deploy">
 
   <property file="${basedir}/build/build.properties"/>
+  <import file="${buildsupport.dir}/target/increment-version.xml"/>
   <import file="${buildsupport.dir}/import/air-imports.xml"/>
 
   <target name="clean" depends="clean-all">
@@ -16,7 +17,7 @@
     <echo message="BuildsupportAIRExample :: test finished."/>
   </target>
   
-  <target name="package" depends="package-air">
+  <target name="package" depends="increment-version, package-air">
     <echo message="BuildsupportAIRExample :: package finished."/>
   </target>
   
