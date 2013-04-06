@@ -5,23 +5,25 @@
   <import file="${buildsupport.dir}/target/increment-version.xml"/>
   <import file="${buildsupport.dir}/import/air-imports.xml"/>
 
-  <target name="clean" depends="clean-all">
+  <target name="clean" depends="clean-all" description="runs clean-all to remove all output">
     <echo message="BuildsupportAIRExample :: clean finished."/>
   </target>
   
-  <target name="build" depends="build-air">
+  <target name="build" depends="build-air" description="runs build-air to compile">
     <echo message="BuildsupportAIRExample :: build finished."/>
   </target>
   
-  <target name="test" depends="test-air">
+  <target name="test" depends="test-air" description="runs test-air to run tests">
     <echo message="BuildsupportAIRExample :: test finished."/>
   </target>
   
-  <target name="package" depends="increment-version, package-air">
+  <target name="package" depends="increment-version, package-air"  
+    description="runs increment-version and package-air to create an AIR package of the swf">
     <echo message="BuildsupportAIRExample :: package finished."/>
   </target>
   
-  <target name="deploy" depends="clean, test, build, package">
+  <target name="deploy" depends="clean, test, build, package"
+    description="runs all targets in order; clean, test, build, package">
     <echo message="BuildsupportAIRExample :: deploy finished."/>
   </target>
 
